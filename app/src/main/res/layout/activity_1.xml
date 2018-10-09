@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity1">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="231dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="232dp"
-        android:text="Transmettre l'information"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:orientation="vertical">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="229dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="15dp"
+        android:id="@+id/edtNom"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="115dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="L'information"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Votre nom"
+        android:inputType="textPersonName" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/edtPrenom"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="188dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Votre prénom"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtAge"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="254dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Votre âge"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/btnEnvoyer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Envoyer" />
+
+</LinearLayout>
