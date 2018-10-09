@@ -27,6 +27,15 @@ public class Activity1 extends Activity implements View.OnClickListener {
         bd.putString("info", ((EditText) findViewById(R.id.editText)).getText().toString());
         it.putExtras(bd);
 
-        startActivity(it);
+        startActivityForResult(it, 516156426);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 516156426 && resultCode == 200) {
+            ((EditText) findViewById(R.id.editText)).setText("Vous êtes revenus !!!");
+        }
     }
 }
