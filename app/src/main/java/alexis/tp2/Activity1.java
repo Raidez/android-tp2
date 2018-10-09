@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Activity1 extends Activity {
+public class Activity1 extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,13 +15,12 @@ public class Activity1 extends Activity {
         setContentView(R.layout.activity_1);
 
         Button btnSearch = (Button) findViewById(R.id.button);
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it = new Intent(Intent.ACTION_WEB_SEARCH);
-                it.putExtra(SearchManager.QUERY, "TEST");
-                startActivity(it);
-            }
-        });
+        btnSearch.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent it = new Intent(this, Activity2.class);
+        startActivity(it);
     }
 }
